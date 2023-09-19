@@ -77,7 +77,7 @@ pipeline {
         stage('build images'){
             steps{
                 script{
-                    echo "building the images "
+                    echo "building the iamges "
                     withCredential([usernamePassword(credentialsId: 'docker-creds',passwordVariable:'PASS',usernameVariable:'USER')]){
                         sh 'docker build -t gauravt11/demo-app:1.0.x .'
                         sh "echo $PASS | docker login -u $USER --password-stdin"
@@ -87,3 +87,7 @@ pipeline {
             }
         }
     }
+    
+
+    }
+
