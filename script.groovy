@@ -1,12 +1,12 @@
-def buildApp(){
-    echo "build Application"
-}
-def testApp(){
-    echo "test Application"
-}
-def deployApp(){
-    echo "deploy Application"
-    echo "printing version ${params.VERSION}"
-}
+// def buildApp(){
+//     echo "build Application"
+// }
+// def testApp(){
+//     echo "test Application"
+// }
+// def deployApp(){
+//     echo "deploy Application"
+//     echo "printing version ${params.VERSION}"
+// }
 
-return this
+// return this
