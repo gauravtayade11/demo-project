@@ -78,11 +78,12 @@ pipeline {
             steps{
                 script{
                     echo "building the iamges "
-                    withCredential([usernamePassword(credentialsId: 'docker-creds',passwordVariable:'PASS',usernameVariable:'USER')]){
-                        sh 'docker build -t gauravt11/demo-app:1.0.x .'
-                        sh "echo $PASS | docker login -u $USER --password-stdin"
-                        sh 'docker push gauravt11/demo-app:1.0.x '
-                    }
+                    // withCredential([usernamePassword(credentialsId: 'docker-creds',passwordVariable:'PASS',usernameVariable:'USER')]){
+                    //     sh 'docker build -t gauravt11/demo-app:1.0.x .'
+                    //     sh "echo $PASS | docker login -u $USER --password-stdin"
+                    //     sh 'docker push gauravt11/demo-app:1.0.x '
+                    // }
+                    sh 'docker build -t gauravt11/demo-app:1.0.x .'
                 }
             }
         }
